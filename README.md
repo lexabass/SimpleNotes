@@ -1,1 +1,1 @@
-# SimpleNotes
+Open master branch
