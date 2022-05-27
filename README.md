@@ -6,3 +6,5 @@ The application can create notes with pictures. The application has a complete s
 
 Firebase FireStore + Firebase Storage database was used.
 
+> Login page
+> ![Login page](relative/path/to/img.jpg?raw=true "Title")
