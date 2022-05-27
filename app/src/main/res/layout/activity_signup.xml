@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".signup"
+    android:background="#0E0613">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/centerline2"
+        android:layout_centerInParent="true">
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_above="@+id/centerline2"
+        android:layout_marginBottom="100dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Новый пользователь?"
+            android:textSize="30dp"
+            android:textColor="#F4C84B"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"/>
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Добро пожаловать"
+            android:textColor="#805a8b"
+            android:gravity="center_horizontal" />
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/centerline2"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/email"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/signupemail"
+            android:hint="Введите Ваш email"
+            android:inputType="textEmailAddress"
+            android:backgroundTint="#805a8b">
+        </EditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/centerline2"
+        android:layout_marginTop="10dp"
+        android:id="@+id/password"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        app:passwordToggleEnabled="true">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/signuppassword"
+            android:hint="Пароль"
+            android:inputType="textPassword"
+            android:backgroundTint="#805a8b">
+        </EditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/signup"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/password"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="30dp"
+        android:backgroundTint="#F4C84B"
+        android:text="Создать аккаунт"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:cornerRadius="5dp">
+
+    </com.google.android.material.button.MaterialButton>
+
+    <TextView
+        android:id="@+id/gotologin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/signup"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:text="Войти в существующий аккаунт"
+        android:textAllCaps="false"
+        android:textColor="#805a8b"></TextView>
+
+
+</RelativeLayout>

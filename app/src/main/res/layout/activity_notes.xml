@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".notesActivity"
+    android:background="#0E0613">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/createnotefab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom|end"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="30dp"
+        app:srcCompat="@drawable/add"
+        app:tint="@color/primary"
+        app:borderWidth="0dp"
+        app:maxImageSize="60dp"
+        app:backgroundTint="@android:color/transparent"
+        android:outlineProvider="none">
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp">
+    </androidx.recyclerview.widget.RecyclerView>
+
+</RelativeLayout>

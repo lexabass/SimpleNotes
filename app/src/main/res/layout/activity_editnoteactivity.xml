@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back"
+    tools:context=".editnoteactivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarofeditnote"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/back">
+
+        <EditText
+            android:id="@+id/edittitleofnote"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="12dp"
+            android:textColor="@color/primary"
+            android:textSize="20sp" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <EditText
+        android:id="@+id/editcontentofnote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbarofeditnote"
+        android:background="@color/back"
+        android:gravity="top|left"
+        android:padding="15dp"
+        android:textColor="@color/gray"
+        android:textSize="15sp" />
+
+    <ImageView
+        android:id="@+id/editimageofnote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:adjustViewBounds="true"
+        android:layout_below="@+id/editcontentofnote"
+        android:visibility="gone" />
+
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/saveeditnote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom|end"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="30dp"
+        app:backgroundTint="@android:color/transparent"
+        app:borderWidth="0dp"
+        app:maxImageSize="60dp"
+        app:srcCompat="@drawable/update"
+        app:tint="@color/primary">
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingLeft="10dp">
+
+        <ImageView
+            android:id="@+id/addimage"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/add_image" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:text="Последнее изменение:"/>
+
+        <TextView
+            android:id="@+id/create_date_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"
+        android:id="@+id/progressbarofeditnote"
+        android:layout_marginTop="10dp">
+    </ProgressBar>
+
+</RelativeLayout>

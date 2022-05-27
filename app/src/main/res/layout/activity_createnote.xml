@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back"
+    tools:context=".createnote">
+
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarofcreatenote"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/back">
+
+        <EditText
+            android:id="@+id/createtitleofnote"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Название"
+            android:paddingTop="12dp"
+            android:textColor="@color/primary"
+            android:textColorHint="@color/gray"
+            android:textSize="20sp" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <EditText
+        android:id="@+id/createcontentofnote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbarofcreatenote"
+        android:background="@color/back"
+        android:gravity="top|left"
+        android:hint="Текст"
+        android:padding="15dp"
+        android:textColor="@color/gray"
+        android:textColorHint="@color/gray"
+        android:textSize="15sp" />
+
+
+    <ImageView
+        android:id="@+id/createimageofnote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:adjustViewBounds="true"
+        android:layout_below="@+id/createcontentofnote"
+        android:visibility="gone" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/savenote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom|end"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="30dp"
+        app:borderWidth="0dp"
+        app:maxImageSize="60dp"
+        app:backgroundTint="@android:color/transparent"
+        app:srcCompat="@drawable/save"
+        app:tint="@color/primary">
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"
+        android:id="@+id/progressbarofcreatenote"
+        android:layout_marginTop="10dp">
+    </ProgressBar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/addimage"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/add_image" />
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>
